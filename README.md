@@ -3,13 +3,15 @@ Decentralization for the masses
 
 ## Lancer le projet :
 
-1 - Placer le SLAVE.jar dans /tmp/mezzeddine/
+- Placer le SLAVE.jar dans /tmp/mezzeddine/
 
-2 - Placer les fichiers input splits dans /tmp/mezzeddine/splits
+- Placer le fichier "machines"  dans /tmp/mezzeddine/ (ce fichier contient la liste des machines à utiliser séparé par des espaces : c126-09 c126-10 ... etc )
 
-3 - Lancer le DEPLOY.jar
+- Placer les fichiers input splits dans /tmp/mezzeddine/splits
 
-4 - Lancer le MASTER.jar
+- Lancer le DEPLOY.jar
+
+- Lancer le MASTER.jar
 
 # Réponses aux questions
 
@@ -119,7 +121,7 @@ Comment, à partir d’une adresse IP, obtenir les noms associés en ligne de co
 
 ` host 137.194.34.201 `
 
-201.34.194.137.in-addr.arpa domain name pointer c45-10.enst.fr.
+`201.34.194.137.in-addr.arpa domain name pointer c45-10.enst.fr.`
 
 ### Question 14:
 
@@ -140,7 +142,8 @@ On utilise un vpn pour pouvoir pinguer depuis l'extérieur.
 ### Question 16:
 
 Calcul en ligne de commande 
-echo $((2+3))
+
+`echo $((2+3))`
 
 ### Question 17:
 ` ssh c45-13 "echo $((2+3))" `
@@ -158,8 +161,7 @@ Afin d'éviter d'entrer le mot de passe à chaque fois, on peut utiliser une cl�
 
 ### Question 21 :
 
-realpath fperso.txt
-/cal/homes/mezzeddine/fperso.txt
+`realpath fperso.txt /cal/homes/mezzeddine/fperso.txt`
 
 ### Question 22 :
 
