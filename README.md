@@ -193,7 +193,7 @@ scp c45-13:/tmp/mezzeddine/local.txt c45-14:/tmp/mezzeddine
 On lance les commandes avec ProcessBuilder de Java.
 
 ## Etape 7 :  déployer automatiquement le programme SLAVE sur un ensemble de machines.
-
+## Etape 7: Déployer automatiquement le programme SLAVE sur un ensemble de machines.
 On utilise pour cela la commande scp, pour copier les SLAVE présent localement dans /tmp/mezzeddine vers les /tmp/mezzeddine de la liste 
 des machines disponibles.
 
