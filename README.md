@@ -6,8 +6,11 @@ Decentralization for the masses
 ### Question 1: Premier comptage en séquentiel pur
 
 HashMap est la mieux appropriée. 
+
 Clé : Le string
+
 Valeur : Le nombre d'occurence
+
 On utilise HashMap pour pouvoir compter le nombre d'occurence.
 
 ### Question 4:
@@ -179,19 +182,23 @@ scp c45-13:/tmp/mezzeddine/local.txt c45-14:/tmp/mezzeddine
 
 ### Question 32 :
 
-scp SLAVE.jar c128-16:/tmp/mezzeddine/
+`scp SLAVE.jar c128-16:/tmp/mezzeddine/`
 
 ### Question 32 :
 
-ssh c128-16 "/tmp/mezzeddine/SLAVE.jar" 
+`ssh c128-16 "/tmp/mezzeddine/SLAVE.jar" `
 
 ## Etape 5 : lancer des programmes en ligne de commande depuis java et afficher la sortie standard et la sortie d’erreur.
 
 On lance les commandes avec ProcessBuilder de Java.
 
-## Etape 7: déployer automatiquement le programme SLAVE sur un ensemble de machines.
+## Etape 7 :  déployer automatiquement le programme SLAVE sur un ensemble de machines.
+
+On utilise pour cela la commande scp, pour copier les SLAVE présent localement dans /tmp/mezzeddine vers les /tmp/mezzeddine de la liste 
+des machines disponibles.
 
 ### Question 32 :
+
 - Votre programme DEPLOY lance-t-il les connections de manière séquentielle (les unes après les autres) ou de manière parallèle?
 
 DEPLOY lance des connexions de manière séquentielle à cause de "waitFor"
@@ -262,7 +269,7 @@ Sur l'input exemple ne contenant que 9 mots :
 `
 
 `
-[+] TIME SPENT IN MAP : *4718ms* !
+[+] TIME SPENT IN MAP : 4718ms !
 `
 
 ### Shuffle
@@ -279,7 +286,7 @@ Sur l'input exemple ne contenant que 9 mots :
 `
 
 `
-[+] TIME SPENT IN SHUFFLE : *6669ms* !
+[+] TIME SPENT IN SHUFFLE : 6669ms !
 `
 
 ### Reduce
@@ -289,7 +296,7 @@ Sur l'input exemple ne contenant que 9 mots :
 `
 
 `
-[+] TIME SPENT IN REDUCE : *4417ms* !
+[+] TIME SPENT IN REDUCE : 4417ms !
 `
 
 ### Total 
