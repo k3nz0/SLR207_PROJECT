@@ -1,49 +1,6 @@
 # SLR207_PROJECT
 Decentralization for the masses
 
-
-# Chronométrage des phases :
-Sur l'input exemple ne contenant que 9 mots : 
-## Map 
-`
-[~] Starting map phase !
-`
-
-`
-[OK] MAP phase terminated !
-`
-
-`
-[+] TIME SPENT IN MAP : *4718ms* !
-`
-## Shuffle
-`
-[~] Preparing slaves shuffle !
-`
-
-`
-[~] Starting slaves shuffle !
-`
-
-`
-[OK] Shuffle phase terminated !
-`
-`
-[+] TIME SPENT IN SHUFFLE : *6669ms* !
-`
-## Reduce
-
-`
-[~] Running reduce !
-`
-`
-[+] TIME SPENT IN REDUCE : *4417ms* !
-`
-## Total 
-On obtient au total *15804ms*, ce qui correspond à environ 15 secondes.
-En version séquentielle nous avons obtenu *100ms* pour le même input.
-Comparé à la version séquentielle produite au début du TP, la version répartie est très lente sur un petit input.
-
 # Réponses aux questions
 
 ### Question 1:
@@ -201,12 +158,6 @@ ssh c128-16 "/tmp/mezzeddine/SLAVE.jar"
 ## Etape 5 : 
 Lancer des commandes avec ProcessBuilder
 
-## Etape 6 : 
-36 - 
-
-
-
-------------
 ## Etape 7: déployer automatiquement le programme SLAVE sur un ensemble de machines.
 
 38- Votre programme DEPLOY lance-t-il les connections de manière séquentielle (les unes après les autres) ou de manière parallèle?
@@ -220,37 +171,34 @@ De manière séquentielle
 Utiliser process.waitFor()
 
 
-## Etape 8: lancer le programme SLAVE sur un ordinateur à distance.
-
 
 ## Etape 9: MapReduce - SPLIT et MAP
-41 - 
 
-Arrivé à l'étape 41, check ~/x.sh (add to it some stuff to generate s0, s1, ... ?)
+### Question 41 : 
 
-41 - Comment attendez-vous que la création des dossiers soit bien effectuée avant de copier véritablement les fichiers?
+On peut créer ici un script pour découper l'input en plusieurs fichiers splits.
+
+
+### Question 42 : 
+
+- Comment attendez-vous que la création des dossiers soit bien effectuée avant de copier véritablement les fichiers?
 
 Lancer un process pour copier les fichiers, puis attendre la fin de son execution avec process.waitFor();
 
-(Rq : Serait-il plus judicieux de faire waitFor avec timeout ?)
+Ici, il serait judicieux d'utiliser waitFor avec timeout.
 
-Votre programme MASTER lance-t-il les copies de manière séquentielle (les unes après les autres) ou de manière parallèle?
-De manière séquentielle
+Le MASTER lance les copies de manière de manière parallèle
 
-42-
+On retrouve deux lignes "Car 1" et non pas "Car 2" car le comptage d'occurence ne se fait pas dans la phase de map.
 
-On retrouve deux lignes "Car 1" et non pas "Car 2" car le comptage d'occurence ne se fait pas en phase de map
-
-43 -
+### Question 43 : 
 
 Le MASTER lance les slaves d'une manière parallèle (vu qu'on n'attend pas avec waitFor)
 
-44 -
- 
- 
-49 - 
-(done) Préparer la phase de shuffle 
 
+ 
+ 
+### Question 49 : 
 
 Afin d'éviter de copier UMx plusieurs fois vers la même machine, on utilise pour chaque machine un HashSet dans lequel on stocke les UMx déjà
 transférés.
@@ -260,15 +208,55 @@ Le programme prépare la phase de Shuffle de manière parallèle.
 Le programme fonctionne d'une manière répartie puisque le contenu des fichiers copiés ne passe pas par le MASTER.
 (Le MASTER se contente seulement d'orchestrer le transfert)
 
-50 - 
-
+### Question 50 : 
 On attend la fin de la phase shuffle en appliquant un waitFor à chaque processus.
 
 Le MASTER lance les SLAVE de manière parallèle.
 
+## Chronométrage des phases :
+Sur l'input exemple ne contenant que 9 mots : 
 
+### Map 
+`
+[~] Starting map phase !
+`
 
+`
+[OK] MAP phase terminated !
+`
 
+`
+[+] TIME SPENT IN MAP : *4718ms* !
+`
 
+### Shuffle
+`
+[~] Preparing slaves shuffle !
+`
 
+`
+[~] Starting slaves shuffle !
+`
 
+`
+[OK] Shuffle phase terminated !
+`
+
+`
+[+] TIME SPENT IN SHUFFLE : *6669ms* !
+`
+
+### Reduce
+
+`
+[~] Running reduce !
+`
+
+`
+[+] TIME SPENT IN REDUCE : *4417ms* !
+`
+
+### Total 
+On obtient au total *15804ms*, ce qui correspond à environ 15 secondes.
+En version séquentielle nous avons obtenu *100ms* pour le même input.
+Comparé à la version séquentielle produite au début du TP, la version répartie est très lente sur un petit input.
