@@ -168,14 +168,16 @@ Le fichier est bien présent depuis B et C.
 ### Question 27:
 
 Transférer fichier local.txt (A) vers /tmp/mezzeddine (B)
-scp local.txt c45-13:/tmp/mezzeddine/
+
+`scp local.txt c45-13:/tmp/mezzeddine/`
 
 
 
 ### Question 28:
 
 Transférer depuis (A) le fichier de (B) vers (C)
-scp c45-13:/tmp/mezzeddine/local.txt c45-14:/tmp/mezzeddine
+
+`scp c45-13:/tmp/mezzeddine/local.txt c45-14:/tmp/mezzeddine`
 
 
 ## Etape 4 : lancer des programmes java à distance manuellement.
@@ -192,8 +194,8 @@ scp c45-13:/tmp/mezzeddine/local.txt c45-14:/tmp/mezzeddine
 
 On lance les commandes avec ProcessBuilder de Java.
 
-## Etape 7 :  déployer automatiquement le programme SLAVE sur un ensemble de machines.
 ## Etape 7: Déployer automatiquement le programme SLAVE sur un ensemble de machines.
+
 On utilise pour cela la commande scp, pour copier les SLAVE présent localement dans /tmp/mezzeddine vers les /tmp/mezzeddine de la liste 
 des machines disponibles.
 
