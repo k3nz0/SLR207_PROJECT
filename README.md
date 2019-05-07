@@ -71,22 +71,22 @@ sante_publique.txt
 
 ### Question 8:
 
-`Elapsed time after reading input and counting number of occurence: 1375`
+`Elapsed time after reading input and counting number of occurence: 1375ms`
 
-`Elapsed time after sorting by value: 1464`
+`Elapsed time after sorting by value: 1464ms`
 
-`Elapsed time after sorting by key: 1549`
+`Elapsed time after sorting by key: 1549ms`
 
 
 ### Question 9:
 
 `Reading file : CC-MAIN-20170322212949-00140-ip-10-233-31-227.ec2.internal.warc.wet`
 
-`Elapsed time after reading input and counting number of occurence: 32944`
+`Elapsed time after reading input and counting number of occurence: 32944ms`
 
-`Elapsed time after sorting by value: 34429`
+`Elapsed time after sorting by value: 34429ms`
 
-`Elapsed time after sorting by key: 44894`
+`Elapsed time after sorting by key: 44894ms`
 
 
 ### Question 10:
@@ -105,6 +105,7 @@ Comment les connaître en ligne de commande :
 ### Question 11:
 
 ` /sbin/ifconfig `
+
 ` curl ifconfig.me `
 
 ### Question 12:
@@ -112,7 +113,7 @@ Comment, à partir d’une adresse IP, obtenir les noms associés en ligne de co
 
 ` host c45-10 `
 
-c45-10.enst.fr has address 137.194.34.201
+`c45-10.enst.fr has address 137.194.34.201`
 
 ### Question 13:
 
