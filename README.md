@@ -3,8 +3,7 @@ Decentralization for the masses
 
 # Réponses aux questions
 
-### Question 1:
-1​ - Premier comptage en séquentiel pur
+### Question 1: Premier comptage en séquentiel pur
 
 HashMap est la mieux appropriée. 
 Clé : Le string
@@ -13,7 +12,8 @@ On utilise HashMap pour pouvoir compter le nombre d'occurence.
 
 ### Question 4:
 forestier_mayotte.txt
-de=12, biens=8, ou=8, forestier=6, des=5
+
+`de=12, biens=8, ou=8, forestier=6, des=5`
 
 
 ### Question 5:
@@ -21,27 +21,38 @@ deontologie_police_nationale.txt
 
 Quels sont les 5 premiers mots:  
 
-de=86, la=40, police=29, et=27, à=25, des=24
+`de=86, la=40, police=29, et=27, à=25, des=24`
 
 ### Question 6:
 domaine_public_fluvial.txt
-de=621, le=373, du=347, la=330, et=266, à=209
+`de=621, le=373, du=347, la=330, et=266, à=209`
 
 ### Question 7:
 sante_publique.txt
 
-de: 189699
-la: 74433
-des: 66705
-à: 65462
-et: 60940
-les: 48772
-du: 48400
-le: 44264
-ou: 39464
-par: 30224
-en: 28922
-au: 25026
+`de: 189699`
+
+`la: 74433`
+
+`des: 66705`
+
+`à: 65462`
+
+`et: 60940`
+
+`les: 48772`
+
+`du: 48400`
+
+`le: 44264`
+
+`ou: 39464`
+
+`par: 30224`
+
+`en: 28922`
+
+`au: 25026`
 
 
 
