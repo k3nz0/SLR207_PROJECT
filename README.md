@@ -7,7 +7,7 @@ Decentralization for the masses
 
 - Placer le fichier "machines"  dans /tmp/mezzeddine/ (ce fichier contient la liste des noms des machines à utiliser séparés par des espaces : c126-09 c126-10 ... etc )
 
-- Placer les fichiers input splits dans /tmp/mezzeddine/splits
+- Placer les fichiers input splits dans /tmp/mezzeddine/splits (en s'assurant que le nombre de fichiers splits correspond bien au nombre de machines)
 
 - Lancer le DEPLOY.jar
 
@@ -253,7 +253,7 @@ On retrouve deux lignes "Car 1" et non pas "Car 2" car le comptage d'occurence n
 
 Le MASTER lance les slaves d'une manière parallèle (vu qu'on n'attend pas avec waitFor)
 
-
+## Etape 6 : SHUFFLE et REDUCE
  
  
 ### Question 49 : 
@@ -318,3 +318,26 @@ Sur l'input exemple ne contenant que 9 mots :
 On obtient au total *15804ms*, ce qui correspond à environ 15 secondes.
 En version séquentielle nous avons obtenu *100ms* pour le même input.
 Comparé à la version séquentielle produite au début du TP, la version répartie est très lente sur un petit input.
+
+Sur le fichier "deontologie_police_nationale.txt", nous obtenons le résultat suivant.
+
+### Map
+
+`[+] TIME SPENT IN MAP : 2635ms !`
+
+### Shuffle
+
+`[+] TIME SPENT IN SHUFFLE : 43083ms !`
+
+### Reduce
+
+`[+] TIME SPENT IN REDUCE : 44527ms !`
+
+### Total
+
+Au total *90245ms*, ce qui correspond à environ 90 secondes.
+La version répartie reste très lente, ceci a pour causes plusieurs critères; les connexions ssh lentes, un transfert des fichiers 
+et une répartition des calculs non optimisées. 
+
+### Question 54: 
+Lors de la phase de Shuffle on peut minimiser les fichiers à transférer
