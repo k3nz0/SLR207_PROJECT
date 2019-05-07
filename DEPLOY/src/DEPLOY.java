@@ -31,11 +31,7 @@ public class DEPLOY {
 	    	else System.out.println("[X] " + machine + " down !");
 	    }
 		
-	    for(String machine : workingMachines) {
-	    	copySlave(machine);
-	    }
-		
-
+	    copySlaves(workingMachines);
 
 	}
 	
@@ -52,21 +48,30 @@ public class DEPLOY {
 	    return m;
 	}
 	
-	private static boolean copySlave(String machine) throws Exception {
-		System.out.println("Copying slave from" + slavePath  + " to " + machine);
-		ProcessBuilder pb = new ProcessBuilder("ssh", machine, "mkdir -p /tmp/mezzeddine");
-		Process process = pb.start();
-		int errCode = process.waitFor();
-		if(errCode == 0) {
-			pb = new ProcessBuilder("scp", slavePath, machine + ":/tmp/mezzeddine");
-			process = pb.start();
-			int errCode2 = process.waitFor();
-//			System.out.print(output(process.getErrorStream()));
-			return errCode2 == 0;
+	private static void copySlaves(ArrayList <String> workingMachines) throws Exception {
+		ProcessBuilder[] pb = new ProcessBuilder[workingMachines.size()]; 
+		Process[] process = new Process[workingMachines.size()];
+		
+		for(int i = 0; i < workingMachines.size(); i++) {
+			System.out.println("Copying slave from" + slavePath  + " to " + workingMachines.get(i));
+			
+			pb[i] = new ProcessBuilder("ssh", workingMachines.get(i), "mkdir -p /tmp/mezzeddine");
+			process[i] = pb[i].start();
+			int errCode = process[i].waitFor();
+			if(errCode == 0) {
+				pb[i] = new ProcessBuilder("scp", slavePath, workingMachines.get(i) + ":/tmp/mezzeddine");
+				process[i] = pb[i].start();
+//				int errCode2 = process[i].waitFor();
+//				System.out.print(output(process.getErrorStream()));
+//				return errCode2 == 0;
+			}
+//			else {
+//				System.out.println(output(process[i].getErrorStream()));
+//				return false;
+//			}			
 		}
-		else {
-			System.out.println(output(process.getErrorStream()));
-			return false;
+		for(int i = 0; i < workingMachines.size(); i++) {
+			process[i].waitFor();
 		}
 	}
 	private static boolean tryConnect(String machine) throws Exception {
