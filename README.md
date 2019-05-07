@@ -5,20 +5,24 @@ Decentralization for the masses
 # Chronométrage des phases :
 Sur l'input exemple ne contenant que 9 mots : 
 ## Map 
+`
 [~] Starting map phase !
 [OK] MAP phase terminated !
 [+] TIME SPENT IN MAP : *4718ms* !
-
+`
 ## Shuffle
+`
 [~] Preparing slaves shuffle !
 [~] Starting slaves shuffle !
 [OK] Shuffle phase terminated !
 [+] TIME SPENT IN SHUFFLE : *6669ms* !
-
+`
 ## Reduce
+
+`
 [~] Running reduce !
 [+] TIME SPENT IN REDUCE : *4417ms* !
-
+`
 ## Total 
 On obtient au total *15804ms*, ce qui correspond à environ 15 secondes.
 En version séquentielle nous avons obtenu *100ms* pour le même input.
@@ -26,8 +30,7 @@ Comparé à la version séquentielle produite au début du TP, la version répar
 
 # Réponses aux questions
 
-## Etape 1:
-​### Question 1:
+### Question 1:
 1​ - Premier comptage en séquentiel pur
 
 HashMap est la mieux appropriée. 
@@ -83,7 +86,6 @@ Elapsed time after reading input and counting number of occurence: 32944
 Elapsed time after sorting by value: 34429
 Elapsed time after sorting by key: 44894
 
-## Etape 2: 
 
 ### Question 10:
 
