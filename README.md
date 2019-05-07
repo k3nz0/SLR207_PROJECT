@@ -7,7 +7,9 @@ Sur l'input exemple ne contenant que 9 mots :
 ## Map 
 `
 [~] Starting map phase !
+
 [OK] MAP phase terminated !
+
 [+] TIME SPENT IN MAP : *4718ms* !
 `
 ## Shuffle
