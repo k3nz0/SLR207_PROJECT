@@ -253,7 +253,7 @@ On retrouve deux lignes "Car 1" et non pas "Car 2" car le comptage d'occurence n
 
 Le MASTER lance les slaves d'une manière parallèle (vu qu'on n'attend pas avec waitFor)
 
-## Etape 6 : SHUFFLE et REDUCE
+## Etape 10 : MapReduce - SHUFFLE et REDUCE
  
  
 ### Question 49 : 
