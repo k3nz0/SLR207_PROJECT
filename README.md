@@ -19,14 +19,24 @@ Sur l'input exemple ne contenant que 9 mots :
 ## Shuffle
 `
 [~] Preparing slaves shuffle !
+`
+
+`
 [~] Starting slaves shuffle !
+`
+
+`
 [OK] Shuffle phase terminated !
+`
+`
 [+] TIME SPENT IN SHUFFLE : *6669ms* !
 `
 ## Reduce
 
 `
 [~] Running reduce !
+`
+`
 [+] TIME SPENT IN REDUCE : *4417ms* !
 `
 ## Total 
