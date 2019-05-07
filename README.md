@@ -47,26 +47,31 @@ au: 25026
 
 ### Question 8:
 
-Elapsed time after reading input and counting number of occurence: 1375
-Elapsed time after sorting by value: 1464
-Elapsed time after sorting by key: 1549
+`Elapsed time after reading input and counting number of occurence: 1375`
+
+`Elapsed time after sorting by value: 1464`
+
+`Elapsed time after sorting by key: 1549`
 
 
 ### Question 9:
 
-Reading file : CC-MAIN-20170322212949-00140-ip-10-233-31-227.ec2.internal.warc.wet
-Elapsed time after reading input and counting number of occurence: 32944
-Elapsed time after sorting by value: 34429
-Elapsed time after sorting by key: 44894
+`Reading file : CC-MAIN-20170322212949-00140-ip-10-233-31-227.ec2.internal.warc.wet`
+
+`Elapsed time after reading input and counting number of occurence: 32944`
+
+`Elapsed time after sorting by value: 34429`
+
+`Elapsed time after sorting by key: 44894`
 
 
 ### Question 10:
 
 Le nom COURT de l'ordinateur : 
-c45-10
+`c45-10`
 
 Le nom LONG de l'ordinateur : 
-c45-10.enst.fr
+`c45-10.enst.fr`
 
 Comment les connaître en ligne de commande : 
 `cat /etc/hosts `
@@ -94,11 +99,12 @@ c45-10.enst.fr has address 137.194.34.201
 ### Question 14:
 
 On teste la communication avec la machine c45-12.
-ping c45-12
 
-ping c45-12.enst.fr
+`ping c45-12`
 
-ping 137.194.34.203
+`ping c45-12.enst.fr`
+
+`ping 137.194.34.203`
 
 Les 3 méthodes fonctionnent.
 
@@ -119,55 +125,74 @@ echo $((2+3))
 Afin d'éviter d'entrer le mot de passe à chaque fois, on peut utiliser une clé rsa.
 
 
-19 -
-$ cd && pwd 
-/cal/homes/mezzeddine
+### Question 19 :
 
-21 -
+`cd && pwd`
+
+`/cal/homes/mezzeddine`
+
+### Question 21 :
+
 realpath fperso.txt
 /cal/homes/mezzeddine/fperso.txt
 
-22 -
+### Question 22 :
+
 Fichier dans /tmp/mezzeddine est stocké physiquement sur l'ordinateur
 
-23 - 
+
+### Question 23 :
+
 On crée un fichier text.txt dans ~/text.txt
 
-24 - 
+
+### Question 25 :
 Le fichier est bien présent depuis B et C.
 
-25 - 
 
-27 - 
+
+### Question 27:
+
 Transférer fichier local.txt (A) vers /tmp/mezzeddine (B)
 scp local.txt c45-13:/tmp/mezzeddine/
 
-28 - 
+
+
+### Question 28:
+
 Transférer depuis (A) le fichier de (B) vers (C)
 scp c45-13:/tmp/mezzeddine/local.txt c45-14:/tmp/mezzeddine
 
 
-## Etape 4 :
+## Etape 4 : lancer des programmes java à distance manuellement.
 
-31 - 
+### Question 32 :
+
 scp SLAVE.jar c128-16:/tmp/mezzeddine/
 
-32 - 
+### Question 32 :
+
 ssh c128-16 "/tmp/mezzeddine/SLAVE.jar" 
 
-## Etape 5 : 
-Lancer des commandes avec ProcessBuilder
+## Etape 5 : lancer des programmes en ligne de commande depuis java et afficher la sortie standard et la sortie d’erreur.
+
+On lance les commandes avec ProcessBuilder de Java.
 
 ## Etape 7: déployer automatiquement le programme SLAVE sur un ensemble de machines.
 
-38- Votre programme DEPLOY lance-t-il les connections de manière séquentielle (les unes après les autres) ou de manière parallèle?
+### Question 32 :
+- Votre programme DEPLOY lance-t-il les connections de manière séquentielle (les unes après les autres) ou de manière parallèle?
+
 DEPLOY lance des connexions de manière séquentielle à cause de "waitFor"
 
 
-39- Votre programme DEPLOY lance-t-il les copies de manière séquentielle (les unes après les autres) ou de manière parallèle?
+### Question 39 :
+- Votre programme DEPLOY lance-t-il les copies de manière séquentielle (les unes après les autres) ou de manière parallèle?
+
 De manière séquentielle
 
-  - Comment faites-vous pour attendre que le mkdir se termine correctement?
+- Comment faites-vous pour attendre que le mkdir se termine correctement?
+
 Utiliser process.waitFor()
 
 
