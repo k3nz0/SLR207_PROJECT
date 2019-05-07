@@ -249,20 +249,26 @@ public class MASTER {
 	}
 		
 	private static boolean copySplitsToSlaves(ArrayList <String> machines) throws Exception {
+		ProcessBuilder[] pb = new ProcessBuilder[machines.size()]; 
+		Process[] process = new Process[machines.size()];
+
 		for(int i = 0; i < machines.size(); i++) {
 			System.out.println("Copying splits to " + machines.get(i));
-			ProcessBuilder pb = new ProcessBuilder("ssh", machines.get(i), "mkdir -p " + splitsPath);
-			Process process = pb.start();
-			int errCode = process.waitFor();
+			pb[i] = new ProcessBuilder("ssh", machines.get(i), "mkdir -p " + splitsPath);
+			process[i] = pb[i].start();
+			int errCode = process[i].waitFor();
 			if(errCode == 0) {
-				pb = new ProcessBuilder("scp", splitsPath + "S" + i + ".txt", machines.get(i) + ":" + splitsPath);
-				process = pb.start();
-				int errCode2 = process.waitFor();
+				pb[i] = new ProcessBuilder("scp", splitsPath + "S" + i + ".txt", machines.get(i) + ":" + splitsPath);
+				process[i] = pb[i].start();
+//				int errCode2 = process.waitFor();
 	//			System.out.print(output(process.getErrorStream()));
 			}
 			else {
-				System.out.println(output(process.getErrorStream()));
+				System.out.println(output(process[i].getErrorStream()));
 			}
+		}
+		for(int i = 0; i < machines.size(); i++) {
+			process[i].waitFor();
 		}
 		return true;
 	}
