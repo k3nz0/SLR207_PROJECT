@@ -5,7 +5,7 @@ Decentralization for the masses
 
 - Placer le SLAVE.jar dans /tmp/mezzeddine/
 
-- Placer le fichier "machines"  dans /tmp/mezzeddine/ (ce fichier contient la liste des machines à utiliser séparé par des espaces : c126-09 c126-10 ... etc )
+- Placer le fichier "machines"  dans /tmp/mezzeddine/ (ce fichier contient la liste des noms des machines à utiliser séparés par des espaces : c126-09 c126-10 ... etc )
 
 - Placer les fichiers input splits dans /tmp/mezzeddine/splits
 
