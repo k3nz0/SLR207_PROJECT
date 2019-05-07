@@ -337,7 +337,7 @@ Sur le fichier "deontologie_police_nationale.txt", nous obtenons le résultat su
 
 Au total *90245ms*, ce qui correspond à environ 90 secondes.
 La version répartie reste très lente, ceci a pour causes plusieurs critères; les connexions ssh lentes, un transfert des fichiers 
-et une répartition des calculs non optimisées. 
+et une répartition des calculs non optimisés. 
 
 ### Question 54: 
-Lors de la phase de Shuffle on peut minimiser les fichiers à transférer
+Lors de la phase de préparation de SHUFFLE, on associe à chaque machine une liste de mots de manière à minimiser les fichiers UM à transférer.
