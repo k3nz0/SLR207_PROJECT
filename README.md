@@ -1,6 +1,16 @@
 # SLR207_PROJECT
 Decentralization for the masses
 
+## Lancer le projet :
+
+1 - Placer le SLAVE.jar dans /tmp/mezzeddine/
+
+2 - Placer les fichiers input splits dans /tmp/mezzeddine/splits
+
+3 - Lancer le DEPLOY.jar
+
+4 - Lancer le MASTER.jar
+
 # Réponses aux questions
 
 ### Question 1: Premier comptage en séquentiel pur
