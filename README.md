@@ -216,13 +216,13 @@ des machines disponibles.
 
 - Votre programme DEPLOY lance-t-il les connections de manière séquentielle (les unes après les autres) ou de manière parallèle?
 
-DEPLOY lance des connexions de manière séquentielle à cause de "waitFor"
+DEPLOY lance des connexions de manière parallèle.
 
 
 ### Question 39 :
 - Votre programme DEPLOY lance-t-il les copies de manière séquentielle (les unes après les autres) ou de manière parallèle?
 
-De manière séquentielle
+De manière parallèle.
 
 - Comment faites-vous pour attendre que le mkdir se termine correctement?
 
